@@ -1,0 +1,86 @@
+:root{
+  --text:rgba(95, 59, 59, 0.977);
+  --hover: ;
+  --background-color: #d9c9ba2d;
+  font-family: 'Ubuntu', sans-serif;
+}
+html{
+  background-color: var(--background-color);
+}
+a,
+button{
+  text-decoration: none;
+  cursor: pointer;
+}
+.hide{
+  display: none;
+}
+.appear{
+  display: block;
+}
+/* HEADER */
+#logo{
+  font-family: 'Quicksand', sans-serif;
+  color: var(--text);
+  font-size: 1.75rem;
+  display: flex;
+  flex-basis: 100%;
+  align-items: center;
+  margin: 2rem 0;
+}
+#logo::after,
+#logo::before{
+  content:"";
+  flex-grow:1;
+  margin: 0 1.5rem;
+  height: 1px;
+  font-size: 0px;
+  line-height: 0px;
+  background: var(--text);
+}
+/* NAVIGATION */
+ul{
+  list-style: none;
+  border: solid var(--text) 1.5px;
+  padding:.6rem .3rem;
+  text-align: center;
+  border-radius: 2.5rem;
+  position: fixed;
+  right: .75rem; 
+  bottom: 5.5rem;
+}
+.nav-list{
+  margin: 1rem .5rem;
+  text-align: center;  
+}
+.nav-list a{
+  color: var(--text);
+}
+.nav-list svg{
+  width: 2rem;
+  fill: var(--text);
+}
+.nav-list p{
+  font-size: .8rem;
+}
+.nav-title{
+  margin: .3rem;
+}
+#hamburger{
+  width:4rem;
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  right: .95rem;
+  bottom: 2rem;
+}
+#hamburger svg{
+  fill: var(--text);
+}
+
+
+
+
+img{
+  width: 100%;
+}
