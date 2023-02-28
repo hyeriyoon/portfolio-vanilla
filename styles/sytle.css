@@ -1,11 +1,13 @@
 :root{
   --text:rgba(95, 59, 59, 0.977);
-  --hover: ;
+  --hover: rgb(191, 162, 213);
   --background-color: #d9c9ba2d;
   font-family: 'Ubuntu', sans-serif;
 }
 html{
   background-color: var(--background-color);
+  height: 100vh;
+  /* min-width: 300px; */
 }
 a,
 button{
@@ -18,6 +20,22 @@ button{
 .appear{
   display: block;
 }
+/* HOVER */
+#logo:hover{
+  color: var(--hover);
+  font-weight: 1000;
+}
+.nav-list svg:hover{
+  fill: var(--hover);
+}
+/* .nav-list svg:hover{
+  fill: var(--hover);
+} */
+.social-media svg:hover,
+#hamburger svg:hover{
+  fill: var(--hover);
+}
+
 /* HEADER */
 #logo{
   font-family: 'Quicksand', sans-serif;
@@ -73,14 +91,26 @@ ul{
   position: absolute;
   right: .95rem;
   bottom: 2rem;
+  z-index: 10;
 }
 #hamburger svg{
   fill: var(--text);
 }
 
 
+/* FOOTER */
+footer{
+  position: absolute;
+  bottom: 1.5rem;
 
-
-img{
   width: 100%;
+  text-align: center;
+}
+footer p,
+footer svg{
+  color: var(--text);
+  fill: var(--text);
+}
+.social-media a{
+  margin: 0 .3rem;
 }

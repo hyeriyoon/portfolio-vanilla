@@ -1,3 +1,4 @@
+/********** index.html **********/
 // Navigation
 const navigation = document.querySelector('#navigation');
 const hamburger = document.getElementById("hamburger");
@@ -8,3 +9,8 @@ hamburger.addEventListener("click", () => {
 });
 
 
+
+
+/********** .html **********/
+/********** .html **********/
+/********** .html **********/
