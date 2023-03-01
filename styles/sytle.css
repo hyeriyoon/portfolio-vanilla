@@ -1,13 +1,18 @@
 :root{
   --text:rgba(95, 59, 59, 0.977);
   --hover: rgb(191, 162, 213);
-  --background-color: #d9c9ba2d;
-  font-family: 'Ubuntu', sans-serif;
+  --lavendar:#cebfd9;
+  --background-color: #f1e7dc2d;
+  font-family: 'Baloo 2', cursive;
 }
 html{
   background-color: var(--background-color);
-  height: 100vh;
-  /* min-width: 300px; */
+  color: var(--text);
+  /* height: 100vh; */
+}
+h1, h2, h3, h4, h5, h6, p{
+  margin: 0;
+  line-height: 1.5;
 }
 a,
 button{
@@ -25,26 +30,56 @@ button{
   color: var(--hover);
   font-weight: 1000;
 }
-.nav-list svg:hover{
-  fill: var(--hover);
+.nav-list a:hover{
+  fill: var(--hover);  
 }
-/* .nav-list svg:hover{
-  fill: var(--hover);
-} */
 .social-media svg:hover,
 #hamburger svg:hover{
   fill: var(--hover);
 }
+/* .single-work:hover{
+  border:#eed9c59e solid 1px;
+  background-color: #eed9c59e;
+} */
+.single-work a:hover{
+  color: ivory;
+  background-color: var(--text);
+ 
+}
+
+
+
+
+
+
 
 /* HEADER */
 #logo{
   font-family: 'Quicksand', sans-serif;
   color: var(--text);
   font-size: 1.75rem;
+  font-weight: 700;
   display: flex;
   flex-basis: 100%;
   align-items: center;
   margin: 2rem 0;
+  /* text-shadow: */
+    /* 0 1px 0px #378ab4, */
+    /* 1px 0 0px #5dabcd, */
+    /* 1px 2px 1px #378ab4, */
+    /* 2px 1px 1px #5dabcd, */
+    /* 2px 3px 2px #378ab4, */
+    /* 3px 2px 2px #5dabcd, */
+    /* 3px 4px 2px rgb(156, 132, 173), */
+    /* 4px 3px 3px rgb(191, 162, 213), */
+    /* 4px 5px 3px rgb(156, 132, 173), */
+    /* 5px 4px 2px rgb(191, 162, 213), */
+    /* 5px 6px 2px rgb(156, 132, 173) */
+    /* 6px 5px 2px rgb(191, 162, 213) */
+    /* 6px 7px 1px rgb(156, 132, 173), */
+    /* 7px 6px 1px rgb(191, 162, 213), */
+    /* 7px 8px 0px rgb(156, 132, 173), */
+    /* 8px 7px 0px rgb(191, 162, 213); */
 }
 #logo::after,
 #logo::before{
@@ -57,7 +92,8 @@ button{
   background: var(--text);
 }
 /* NAVIGATION */
-ul{
+#navigation{
+  /* background-color: #faf9f7;
   list-style: none;
   border: solid var(--text) 1.5px;
   padding:.6rem .3rem;
@@ -66,17 +102,42 @@ ul{
   position: fixed;
   right: .75rem; 
   bottom: 5.5rem;
+  z-index: 10; */
+
+  list-style: none;
+  padding: .7rem .3rem;
+  margin:0;
+  background-color: var(--lavendar);
+  position: fixed;
+  right: .75rem; 
+  bottom: 6.5rem;
+  width: fit-content;
+  border-radius: 2rem;
+  z-index : 10;
+}
+#navigation::after{
+  content: ' ';
+  position: absolute;
+  width: 0;
+  height: 0;
+  bottom: -8px;
+  left: 50%;
+  margin-left: -10px;
+  transform: rotate(180deg);
+  border-style: solid;
+  border-width: 0 10px 10px 10px;
+  border-color: transparent transparent var(--lavendar) transparent;
 }
 .nav-list{
   margin: 1rem .5rem;
   text-align: center;  
 }
 .nav-list a{
-  color: var(--text);
+  color: ivory;
 }
 .nav-list svg{
   width: 2rem;
-  fill: var(--text);
+  fill: ivory;
 }
 .nav-list p{
   font-size: .8rem;
@@ -88,7 +149,7 @@ ul{
   width:4rem;
   border: none;
   background-color: transparent;
-  position: absolute;
+  position: fixed;
   right: .95rem;
   bottom: 2rem;
   z-index: 10;
@@ -96,15 +157,60 @@ ul{
 #hamburger svg{
   fill: var(--text);
 }
+/* PAGES */
+#about,
+#works{
+  padding: 1rem;
+  margin: 0 auto;
+}
+/* PAGE-ABOUT */
+#about-story,
+#about-skills{
+  margin: 0 0 2.5rem 0;
+}
+#about-skills h3{
+  margin: .5rem 0 0 0 ;
+}
+
+/* PAGE-WORKS */
+#works img{
+  max-width: 260px;
+}
+.single-work{
+  margin: 0 0 2rem 0;
+  padding: 1.5rem;
+  border: solid 1px;
+  border-radius: 1.5rem;
+}
+.single-work h3,
+.single-work h5,
+.single-work p{
+  margin-bottom: .65rem;
+}
+.single-work a{
+  /* display: none; */
+  width: fit-content;
+  display: block;
+  /* color: ivory;
+  background-color: var(--text); */
+  color: var(--text);
+  border: 1px var(--text) solid;
+  padding: .4rem 6rem;
+  border-radius: .3rem;
+  font-size: .95rem;
+  text-align: center;
+  margin: 2rem auto 0;  
+}
+
 
 
 /* FOOTER */
 footer{
-  position: absolute;
+  /* position: absolute; */
   bottom: 1.5rem;
-
   width: 100%;
   text-align: center;
+  margin-bottom: 1rem;
 }
 footer p,
 footer svg{
