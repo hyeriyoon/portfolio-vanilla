@@ -4,6 +4,8 @@
   --lavendar:#cebfd9;
   --background-color: #f1e7dc2d;
   font-family: 'Baloo 2', cursive;
+  /* font-family: 'Noto Sans', sans-serif; */
+
 }
 html{
   background-color: var(--background-color);
@@ -13,6 +15,9 @@ html{
 h1, h2, h3, h4, h5, h6, p{
   margin: 0;
   line-height: 1.5;
+}
+p{
+  font-family: 'Noto Sans', sans-serif;
 }
 a,
 button{
@@ -30,7 +35,7 @@ button{
   color: var(--hover);
   font-weight: 1000;
 }
-.nav-list a:hover{
+.nav-list svg:hover{
   fill: var(--hover);  
 }
 .social-media svg:hover,
@@ -43,8 +48,9 @@ button{
 } */
 .single-work a:hover{
   color: ivory;
-  background-color: var(--text);
- 
+  background-color: var(--lavendar);
+  border:var(--lavendar) solid 1px;
+
 }
 
 
@@ -155,7 +161,7 @@ button{
   z-index: 10;
 }
 #hamburger svg{
-  fill: var(--text);
+  fill: var(--hover);
 }
 /* PAGES */
 #about,
@@ -177,10 +183,12 @@ button{
   max-width: 260px;
 }
 .single-work{
+  width: 255px;
   margin: 0 0 2rem 0;
-  padding: 1.5rem;
-  border: solid 1px;
-  border-radius: 1.5rem;
+  padding: 1.5rem 1.5rem 2rem;
+  /* background-color: rgb(242, 215, 184); */
+  border: solid 1px var(--text);
+  /* border-radius: 1.5rem; */
 }
 .single-work h3,
 .single-work h5,
@@ -195,11 +203,18 @@ button{
   background-color: var(--text); */
   color: var(--text);
   border: 1px var(--text) solid;
-  padding: .4rem 6rem;
+  padding: .4rem 5rem;
   border-radius: .3rem;
   font-size: .95rem;
   text-align: center;
   margin: 2rem auto 0;  
+}
+.single-work h3{
+  font-family: 'Baloo 2', cursive;
+  font-size: 1.2rem;
+}
+.single-work p{
+  font-size: .9rem;
 }
 
 
