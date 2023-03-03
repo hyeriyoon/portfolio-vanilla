@@ -217,6 +217,72 @@ button{
   font-size: .9rem;
 }
 
+/* PAGE-SINGLE-WORK */
+#work-wrapper{
+  margin: 0 auto;
+}
+#work{
+  margin: 2rem 1rem;
+}
+#work img{
+  width: 260px;
+  display: block;
+  margin: 1rem auto;
+}
+#work h2,
+#work p{
+  margin-bottom: 1rem;
+}
+#links{
+  min-width: 263px;
+  width: fit-content;
+  margin: 0 auto 2rem;
+}
+#links a{
+  border-radius: .3rem;
+  padding: .2rem 2.4rem;
+
+  border: 1px var(--text) solid;
+  color: var(--text);
+
+  /* background-color: var(--lavendar);
+  border: var(--lavendar) 1px solid;
+  color: ivory; */
+}
+#links a:hover{
+  background-color: var(--lavendar);
+  border: var(--lavendar) 1px solid;
+  color: ivory;
+  /* background-color: transparent;
+  border: 1px var(--text) solid;
+  color: var(--text); */
+}
+#return{
+  color: var(--text);
+  display: inline-block;
+}
+#return::before{
+  content: '← ';
+}
+#return::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 1px;
+  background: var(--hover);
+  transition: width .3s;
+}
+#return:hover{
+  color: var(--hover);
+  font-weight: 1000;
+}
+#return:hover::after {
+  width: 100%;
+}
+#tools{
+  font-size: .85rem;
+}
+
 
 
 /* FOOTER */
